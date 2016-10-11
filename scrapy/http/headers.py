@@ -49,6 +49,7 @@ class Headers(CaselessDict):
             return None
 
     def getlist(self, key, def_val=None):
+        """Get list of key values from Headers"""
         try:
             return super(Headers, self).__getitem__(key)
         except KeyError:
